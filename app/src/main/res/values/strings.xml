@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">UPAX Android</string>
+    <string name="go_to_app">Ir a App Pokemon</string>
+    <string name="set_background">Color de background</string>
+    <string name="set_colot_initials">Color de iniciales</string>
 </resources>
