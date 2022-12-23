@@ -1,27 +1,21 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
     id 'dagger.hilt.android.plugin'
-//    id 'realm-android'
 }
 
-apply from: 'versions.gradle'
-
 android {
-    compileSdk 33
+    namespace 'com.upax.upokemon'
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.upax.androidproject"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        minSdk 23
+        targetSdk 32
 
-        vectorDrawables.useSupportLibrary true
-        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -41,28 +35,10 @@ android {
         viewBinding true
 //        compose true
     }
-//    composeOptions {
-//        kotlinCompilerExtensionVersion versions.compose
-//    }
-
-    /**
-     * Room config to export db schemas
-     */
-    defaultConfig {
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
-                arguments["room.incremental"] = "true"
-            }
-        }
-    }
-    sourceSets {
-        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
-    }
-
 }
 
 dependencies {
+
     // Android base
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -92,6 +68,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:3.12.0"
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
 
     // Utils
     implementation "com.google.code.gson:gson:2.9.0"

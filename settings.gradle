@@ -1,2 +1,3 @@
 rootProject.name = "upax-android-project"
 include ':app'
+include ':UPokemon'
