@@ -17,7 +17,7 @@ class UPokemonRepository @Inject constructor(
 
         val result= performUpdateOperation(
             {
-                service.getAllPokemon(value)
+                service.getAllPokemon()
             },
             {
                 val json= Gson().toJson(it)

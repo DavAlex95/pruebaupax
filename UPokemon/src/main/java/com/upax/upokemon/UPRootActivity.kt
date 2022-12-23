@@ -8,7 +8,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.upax.upokemon.base.UPBaseActivity
 import com.upax.upokemon.databinding.ActivityUprootBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class UPRootActivity : UPBaseActivity<ActivityUprootBinding>(ActivityUprootBinding::inflate) {
 
     override fun setUpView() {

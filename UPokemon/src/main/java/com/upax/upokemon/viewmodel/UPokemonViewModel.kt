@@ -31,11 +31,11 @@ class UPokemonViewModel @Inject constructor(
 
     fun getPokemons(offset:Int){
         viewModelScope.launch ( Dispatchers.IO+coroutineException ){
-            repository.getPokemonDetail(offset).onStart {}.collectLatest { result->
+            repository.getPokemon(offset).onStart {}.collectLatest { result->
 
                 when(result){
                     is UPNetworkResult.Success->{
-                        _pokemonDetail.value=UPResult.Success(result.data)
+                        _pokemons.value=UPResult.Success(result.data)
                     }
                     is UPNetworkResult.Error->{
 

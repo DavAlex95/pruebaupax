@@ -14,6 +14,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin")
         classpath("com.google.dagger:hilt-android-gradle-plugin:$versions.hiltGradlePlugin")
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$versions.safeArgs")
+        classpath  "com.google.dagger:hilt-android-gradle-plugin:2.42"
 //        classpath ("io.realm:realm-gradle-plugin:$versions.realm")
     }
 }

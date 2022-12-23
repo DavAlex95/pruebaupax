@@ -24,8 +24,8 @@ class PokemonFragment : UPBaseFragment<FragmentHomeBinding>(FragmentHomeBinding:
     override fun setupView() {
         super.setupView()
         mContext=binding.root.context
-        //initElements()
-        //initObservers()
+        initElements()
+        initObservers()
     }
 
     private fun initElements() {
