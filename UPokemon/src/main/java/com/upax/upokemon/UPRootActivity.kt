@@ -1,27 +1,30 @@
 package com.upax.upokemon
 
-import android.content.Context
-import androidx.activity.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
+
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.upax.upokemon.base.UPBaseActivity
 import com.upax.upokemon.databinding.ActivityUprootBinding
-import com.upax.upokemon.viewmodel.UPokemonViewModel
 
 class UPRootActivity : UPBaseActivity<ActivityUprootBinding>(ActivityUprootBinding::inflate) {
 
-    private val homeViewModel : UPokemonViewModel by viewModels()
-    lateinit var mContext: Context
-
     override fun setUpView() {
         super.setUpView()
-        initElements()
+
+        val navView: BottomNavigationView = binding.navView
+
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_pokemon, R.id.navigation_fav_pokemons)
+        )
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
     }
 
-    private fun initElements() {
-        with(binding){
-            rv.layoutManager=
-                LinearLayoutManager(mContext, LinearLayoutManager.VERTICAL, false)
-
-        }
-    }
 }

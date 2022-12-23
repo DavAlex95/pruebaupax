@@ -13,7 +13,7 @@ abstract class UPBaseDataSource {
     ): UPNetworkResult<O, String> {
         try {
             val response = call()
-            Log.e(this.javaClass.name, "request: ${response.raw().request()}")
+            Log.e(this.javaClass.name, "request: ${response.raw().request}")
             return if (response.isSuccessful && response.body() != null) {
                 val result = deserialize(response.body())
                 Log.e(this.javaClass.name, "response: ${Gson().toJson(result)}")

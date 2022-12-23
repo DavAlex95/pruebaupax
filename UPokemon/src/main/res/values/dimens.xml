@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="up_2dp">2dp</dimen>
+    <dimen name="up_24p">4dp</dimen>
+    <dimen name="up_6dp">6dp</dimen>
+    <dimen name="up_8dp">8dp</dimen>
+    <dimen name="up_10dp">10dp</dimen>
+    <dimen name="up_12dp">12dp</dimen>
+    <dimen name="up_16dp">16dp</dimen>
+    <dimen name="up_20dp">20dp</dimen>
+    <dimen name="up_24dp">24dp</dimen>
+    <dimen name="up_32dp">32dp</dimen>
+    <dimen name="up_35dp">35dp</dimen>
+    <dimen name="up_40dp">40dp</dimen>
+    <dimen name="up_52dp">52dp</dimen>
+    <dimen name="up_64dp">64dp</dimen>
+    <dimen name="up_80dp">80dp</dimen>
+
+    <dimen name="up_34sp">34sp</dimen>
+    <dimen name="up_28sp">28sp</dimen>
+    <dimen name="up_24sp">24sp</dimen>
+    <dimen name="up_22sp">22sp</dimen>
+    <dimen name="up_27sp">27sp</dimen>
+    <dimen name="up_21sp">21sp</dimen>
+    <dimen name="up_18sp">18sp</dimen>
+    <dimen name="up_16sp">16sp</dimen>
+    <dimen name="up_14sp">14sp</dimen>
+    <dimen name="up_12sp">12sp</dimen>
+    <dimen name="up_10sp">10sp</dimen>
+    <dimen name="up_8sp">8sp</dimen>
+
+</resources>
